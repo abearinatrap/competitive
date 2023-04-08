@@ -1,0 +1,6 @@
+There has been a big storm in Stockholm, so Gunnar and Emma have been stuck at home without electricity for a couple of hours. They have finished playing all the games they have, so they came up with a new one. Each player has 2 dice which he or she rolls. The player with a bigger sum wins. If both sums are the same, the game ends in a tie.
+Task
+
+Given the description of Gunnar’s and Emma’s dice, which player has higher chances of winning?
+
+All of their dice have the following property: each die contains numbers a, a + 1, ..., b, where a and b are the lowest and highest numbers respectively on the die. Each number appears exactly on one side, so the die has sides.

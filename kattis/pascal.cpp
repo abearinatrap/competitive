@@ -21,7 +21,21 @@ typedef priority_queue<int> pqi;
 #define CLR() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    int n; C(n);
+
+    if(n==1){
+        cout << 0 << endl;
+        return;
+    }else{
+        //go from beginning instead of end
+        for(int i=2;i<sqrt(n)+1; ++i){
+            if(n%i==0){
+                cout << n-(n/i) << endl;
+                return;
+            } 
+        }
+    }
+    cout << n-1 << endl;
 }
 
 int main(){

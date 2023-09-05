@@ -18,10 +18,27 @@ typedef priority_queue<int> pqi;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define C(i) cin >> i
-#define CLR() cin.ignore(INT_MAX,'\n')
+
+#define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    int n,y;
+    cin >> n >> y;
+    vi d(n);
+    fo(i, y){
+        int o; cin >> o;
+        d[o]=1;
+    }
+
+    int c=0;
+    fo(i,n){
+        if(d[i]==1){
+            c++;
+        }else{
+            cout << i << endl;
+        }
+    }
+    cout << "Mario got " << c << " of the dangerous obstacles." << endl;
 }
 
 int main(){

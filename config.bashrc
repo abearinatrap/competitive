@@ -1,1 +1,1 @@
-alias g=g++-12
+alias g="g++-12 -std=c++20 -Wall"

@@ -21,7 +21,18 @@ typedef priority_queue<int> pqi;
 #define CLR() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    int n; C(n);
+    vi num(n);
+    fo(i,n){
+        C(num[i]);
+    }
+
+    sort(all(num),greater<int>());
+    ll sum=0;
+    for(int i=2;i<n;i+=3){
+        sum+=num[i];
+    }
+    cout << sum << endl;
 }
 
 int main(){

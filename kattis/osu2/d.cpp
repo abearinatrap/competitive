@@ -12,16 +12,46 @@ typedef priority_queue<int> pqi;
 #define fi first
 #define se second
 #define pb push_back
+#define str string
 #define all(a) a.begin(),a.end()
 #define sz(a) ((int)a.size())
 #define fo(i, n) for (int i = 0; i < n; ++i)
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define C(i) cin >> i
-#define CLR() cin.ignore(INT_MAX,'\n')
+
+#define CLRS() cin.ignore(INT_MAX,'\n')
+
 
 void solve(){
-    
+    int n; cin >> n;
+    str ls,cs;
+    n-=2;
+    cin >> ls;
+    cin >> cs;
+    int ctrl;
+    if(ls < cs){
+        ctrl= -1;
+    }else if(ls > cs){
+        ctrl= 1;
+    }
+
+    fo(i,n){
+        ls = cs;
+        cin >> cs;
+        if (ctrl * ls.compare(cs) < 0){
+            cout << "NEITHER" << endl;
+            return;
+        }
+    }
+
+    if (ctrl < 0) {
+
+        cout << "INCREASING" << endl;
+    }else {
+
+        cout << "DECREASING" << endl;
+    }
 }
 
 int main(){

@@ -18,15 +18,44 @@ typedef priority_queue<int> pqi;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define C(i) cin >> i
-#define CLR() cin.ignore(INT_MAX,'\n')
+
+#define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    string s;
+    cin >> s;
+    int total=0;
+    if(s[0]=='?'){
+        total+=9;
+    }else{
+        total+=1;
+    }
+    if(s[0]=='0') {cout << 0 << endl; return;}
+    int ss = sz(s);
+    if(ss==1){
+        cout << total << endl;
+        return;
+    }
+
+    for(int i=1;i<ss-1;++i){
+        if(s[i]=='?'){
+            total*=10;
+        }
+    }
+    if(s[ss-1]=='?'){
+        total*=10;
+    }
+    cout << total << endl;
+    return;
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    solve();
+    int repeat;
+    cin >> repeat;
+    while(repeat--){
+        solve();
+    }
     return 0;
 }

@@ -18,6 +18,7 @@ typedef priority_queue<int> pqi;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define C(i) cin >> i
+
 #define CLR() cin.ignore(INT_MAX,'\n')
 
 void solve(){
@@ -27,6 +28,10 @@ void solve(){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    solve();
+    int repeat;
+    cin >> repeat;
+    while(repeat--){
+        solve();
+    }
     return 0;
 }

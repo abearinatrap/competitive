@@ -18,9 +18,29 @@ typedef priority_queue<int> pqi;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define C(i) cin >> i
-#define CLR() cin.ignore(INT_MAX,'\n')
+
+#define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
+    int n; C(n);
+    vector<pii> sa(n), sw(n);
+    fo(i,n){
+        cin >> sa[i].first;
+        sa[i].second=i;
+    }
+
+    fo(i,n){
+        cin >> sw[i].first;
+        sw[i].second=i;
+    }
+
+    int a,b;
+    cin >> a >> b;
+
+    vector<pii> swc(sw), sac(sa);
+    sort(all(sac));
+    sort(all(swc));
+    
     
 }
 

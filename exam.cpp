@@ -19,22 +19,32 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    in(n);
+    string me, fr;
+    CLRS();
+    getline(cin, me); getline(cin, fr);
+    int ss = sz(me);
+    int diff=0;
+    for(int i=0;i<ss;++i){
+        if(me[i]!=fr[i]){
+            ++diff;
+        }
+    }
+    /*
+    diff = (length-fRIGHT)
+    sum += min(length-diff,fRight);    friend right and you right 
+    sum += min(length-fRight, diff)       friend wrong and you right
+    */
+    cout << min(ss-n, diff)+ min(ss-diff,n) << endl;
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int repeat;
-    cin >> repeat;
-    while(repeat--){
-        solve();
-    }
+    solve();
     return 0;
 }

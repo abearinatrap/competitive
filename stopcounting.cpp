@@ -19,22 +19,39 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    double s=0;
+    int num=0;
+    int n;
+    double cur;
+    double maxn=0;
+    cin >> n;
+    vi nums(n);
+    fo(i,n){
+        cin >> nums[i];
+        s+=nums[i];
+        num++;
+        cur = s/num;
+        maxn = max(maxn,cur);
+    }
+
+    s=0;num=0;
+    of(i,n-1){
+        s+=nums[i];
+        num++;
+        cur = s/num;
+        maxn = max(maxn,cur);
+    }
+
+    printf("%.10lf",maxn);
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int repeat;
-    cin >> repeat;
-    while(repeat--){
-        solve();
-    }
+    solve();
     return 0;
 }

@@ -19,13 +19,22 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    in(n);
+    int mtrap = INT_MAX;
+    fo(i,n){
+        int a,b;
+        cin >> a >> b;
+        if (b&1){
+            mtrap = min(mtrap, a+b/2);
+        }else{
+            mtrap = min(mtrap, a+b/2-1);
+        }
+    }
+    cout << mtrap << endl;
 }
 
 int main(){

@@ -18,14 +18,23 @@ typedef string str;
 #define fo(i, n) for (int i = 0; i < n; ++i)
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
+#define C(i) cin >> i
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    string command;
+    getline(cin, command);
+    in(n);
+    vi nums(n);
+    scanf("[%d", &nums[0]);
+
+    for(int i=1;i<n;++i){
+        scanf(",%d",&nums[i]);
+        cout << nums[i] << " ";
+    }
+
 }
 
 int main(){

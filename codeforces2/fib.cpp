@@ -19,8 +19,6 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
@@ -28,13 +26,35 @@ void solve(){
     
 }
 
+
+int fib(int n){
+    if (n==0 || n==1){
+        return n;
+
+    }
+    int a=0;
+    int b=1;
+    for(int i=1;i<n;++i){
+        int temp = a+b;
+        a=b;
+        b=temp;
+    }
+    return b;
+}
+vector<int> dp(1000,-1);
+dp[0]=0;
+dp[1]=1;
+int fib(int n){
+    if (n==0 || n==1){
+        return n;
+
+    }
+
+}
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int repeat;
-    cin >> repeat;
-    while(repeat--){
-        solve();
-    }
+    cout << fib(4) << endl;
     return 0;
 }

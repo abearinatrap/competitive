@@ -19,22 +19,33 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    in(n); in(cs);
+    int sum=cs;
+    int cnt=0;
+    fo(i,n){
+        string word;
+        cin >> word;
+        int a = stoi(word);
+        if(word[word.size()-1]=='L'){
+            a++;
+        }
+        if(a>sum){
+            cnt++;
+            sum=cs;
+        }
+        sum-=a;
+        //cout << cnt << " " << sum << endl;
+    }
+    cout << cnt << endl;
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int repeat;
-    cin >> repeat;
-    while(repeat--){
-        solve();
-    }
+    solve();
     return 0;
 }

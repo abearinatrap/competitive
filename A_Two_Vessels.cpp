@@ -8,7 +8,6 @@ typedef vector<ll> vl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 typedef priority_queue<int> pqi;
-typedef string str;
 
 #define fi first
 #define se second
@@ -18,14 +17,17 @@ typedef string str;
 #define fo(i, n) for (int i = 0; i < n; ++i)
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
-#define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
+#define C(i) cin >> i
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
+    int a,b,c;
+    cin >> a >> b >> c;
+    double f = abs(a-b);
     
+    f/=2*c;
+    cout << ceil(f) << endl;
 }
 
 int main(){

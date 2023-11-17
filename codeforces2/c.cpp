@@ -19,13 +19,29 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
+    in(n);in(k);ll x; cin >> x;
+    ll up = (ll)n * (n+1) / 2;
+    int a = n-k;
+    ll down = (ll)a * (a+1) /2;
+    ll sumk;
+    if(up-down<x){
+        goto bad;
+    }
     
+    sumk = (ll)k * (k+1) / 2;
+    if(sumk>x){
+        goto bad;
+    }
+
+    cout << "YES" << endl;
+    return;
+bad:
+    cout << "NO" << endl;
+    return;
 }
 
 int main(){

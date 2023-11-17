@@ -18,23 +18,31 @@ typedef string str;
 #define fo(i, n) for (int i = 0; i < n; ++i)
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
+#define C(i) cin >> i
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    int n; cin >> n; --n;
+    vi num(n);
+    for(int i=1;i<=n;++i){
+        in(t);
+        num[t] = i+1;
+    }
+
+    cout << "1";
+    fo(i,n){
+        cout << " " << num[i];
+    }
+
+    cout << endl;
+
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int repeat;
-    cin >> repeat;
-    while(repeat--){
-        solve();
-    }
+    solve();
     return 0;
 }

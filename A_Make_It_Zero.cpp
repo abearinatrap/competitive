@@ -19,13 +19,35 @@ typedef string str;
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    in(n);
+    vi a(n);
+    fo(i,n){
+        cin >> a[i];
+    }
+    int t=0;
+    fo(i,n){
+        t^=a[i];
+    }
+    if(t==0){
+        cout << 1 << endl;
+        cout << 1 << " " << n << endl;
+        return;
+    }
+    if(n&1){
+        cout << 4 << endl;
+        cout << 1 << " " << n-1 << endl;
+        cout << 1 << " " << n-1 << endl;
+        cout << n-1<< " " << n << endl;
+        cout << n-1<< " " << n << endl;
+        return;
+    }
+    cout << 2 << endl;
+    cout << 1 << " " << n << endl;
+    cout << 1 << " " << n << endl;
 }
 
 int main(){

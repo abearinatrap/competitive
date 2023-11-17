@@ -18,23 +18,36 @@ typedef string str;
 #define fo(i, n) for (int i = 0; i < n; ++i)
 #define of(i, n) for (int i = n; i >= 0; --i)
 #define rep(i, a, b) for (int i = a; i < b; ++i)
+#define C(i) cin >> i
 #define in(i) int i; cin >> i
-#define S(i) str i; cin >> i
-#define L(i) str i; getline(cin, i)
 
 #define CLRS() cin.ignore(INT_MAX,'\n')
 
 void solve(){
-    
+    str line;
+    while(getline(cin, line)){
+        stringstream s(line);
+        int num;
+        vi nums;
+        int sum=0;
+        while(s>>num){
+            nums.pb(num);
+            sum+=num;
+        }
+
+        for(auto c :nums){
+            if (sum-c==c){
+                cout << c << endl;
+                break;
+            }
+        }
+    }
+
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int repeat;
-    cin >> repeat;
-    while(repeat--){
-        solve();
-    }
+    solve();
     return 0;
 }

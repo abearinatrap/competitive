@@ -29,6 +29,7 @@ void solve(){
     while(true){
         str a;
         getline(cin, a);
+        
         stringstream ss;
         int time;
         ss << a;
@@ -66,4 +67,22 @@ int main(){
     cin.tie(NULL);
     solve();
     return 0;
+}
+
+
+vi arr = {1, 5, 7, 10, 12};
+int target = 5;
+int left = 0;              // Left bound of the search range
+int right = arr.size() - 1; // Right bound of the search range
+
+while (left <= right) {
+    int mid = left + (right - left) / 2; // Calculate the middle index
+
+    if (arr[mid] == target) {
+        return mid; // Element found, return its index
+    } else if (arr[mid] < target) {
+        left = mid + 1; // Adjust the left bound
+    } else {
+        right = mid - 1; // Adjust the right bound
+    }
 }

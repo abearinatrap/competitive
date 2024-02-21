@@ -111,7 +111,8 @@
         "stacktrace": "cpp",
         "stop_token": "cpp",
         "syncstream": "cpp",
-        "cstdalign": "cpp"
+        "cstdalign": "cpp",
+        "format": "cpp"
     },
     "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13"
 }
